@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Website Scrapper</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+  <link rel="stylesheet" href="css/lib.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="center sand">
+  <section class="padding margin round card">
+    <h1 class="text-teal bold">WEBSITE SCRAPER</h1>
+    <form class="padding">
+      <input class="input" type="url" placeholder="Enter a valid url e.g https//nodejs.org" id="url" required> <br />
+      <input class="input" type="text" placeholder="Choose a name for your site e.g node" id="name" required> <br />
+      <input class="btn button teal round submit" type="submit" value="Download">
+    </form>
+    <p class="text-teal padding">Websites Downloads: <span id="downloads"></span></p>
+    <button class="btn button teal round margin-bottom" id="open-sites">View Websites</button>
+    <div class="display-middle hideContent">
+      <div class="loader"></div>
+    </div>
+  </section>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
