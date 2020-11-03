@@ -2,7 +2,6 @@ const { ipcRenderer, shell } = require('electron');
 const os = require('os');
 const path = require('path');
 const slash = require('slash');
-const fs = require('fs');
 
 const form = document.querySelector('form');
 const url = document.querySelector('#url');
@@ -53,13 +52,7 @@ ipcRenderer.on('error', (event, error) => {
 });
 
 openBtn.addEventListener('click', () => {
-  fs.readdir(downloadPath.innerText, (err, files) => {
-    if (files.length === 0) {
-      alert('You have no downloads yet')
-    } else {
-      shell.openPath(downloadPath.innerText);
-    }
-  });
+  shell.openPath(downloadPath.innerText);
 });
 
 function startLoader() {
