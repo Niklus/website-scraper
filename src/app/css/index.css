@@ -16,6 +16,10 @@ h1 {
   animation: spin 2s linear infinite;
 }
 
+.btn{
+  width: 500px;
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
